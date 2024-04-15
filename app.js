@@ -1,5 +1,8 @@
 function addToDo() {
-    let todo = document.getElementById("new-todo").ariaValueMax;
+    let todoElement = document.getElementById("new-todo");
+    let todo = todoElement.value;
+    todoElement.value = "";
+
     if (todo.length < 3) {
         return alert("At Least 3 Letters To Add Tasks For Todo List");
     }
